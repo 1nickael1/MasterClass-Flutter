@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/pages/animacao_implicita.dart';
 import 'package:flutter_playground/pages/money_page.dart';
 
 main() {
@@ -12,7 +13,7 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Money(),
+      home: AnimationImplicita(),
     );
   }
 }
