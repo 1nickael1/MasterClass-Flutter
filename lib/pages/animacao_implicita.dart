@@ -17,6 +17,9 @@ class _AnimationImplicitaState extends State<AnimationImplicita> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Animação Implicita'),
+        ),
         body: AnimatedAlign(
           duration: duration,
           curve: Curves.easeInOut,
