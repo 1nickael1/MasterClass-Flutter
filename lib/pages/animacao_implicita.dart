@@ -10,12 +10,15 @@ class AnimationImplicita extends StatefulWidget {
 
 class _AnimationImplicitaState extends State<AnimationImplicita> {
   var isCircle = true;
+  final Duration duration = const Duration(milliseconds: 800);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: AnimatedAlign(
-          duration: const Duration(seconds: 1),
+          duration: duration,
           curve: Curves.easeInOut,
           alignment: isCircle ? Alignment.bottomRight : Alignment.topCenter,
           child: Padding(
@@ -50,6 +53,7 @@ class _AnimationImplicitaState extends State<AnimationImplicita> {
 class ShapeWidget extends StatelessWidget {
   final Shape shape;
   final void Function() onTap;
+  final Duration duration = const Duration(milliseconds: 800);
 
   const ShapeWidget({super.key, required this.shape, required this.onTap});
 
@@ -58,7 +62,7 @@ class ShapeWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: const Duration(seconds: 1),
+        duration: duration,
         curve: Curves.easeInOut,
         width: shape.width,
         height: shape.height,
