@@ -22,7 +22,7 @@ class _AnimationImplicitaState extends State<AnimationImplicita> {
         ),
         body: AnimatedAlign(
           duration: duration,
-          curve: Curves.easeInOut,
+          curve: Curves.fastOutSlowIn,
           alignment: isCircle ? Alignment.bottomRight : Alignment.topCenter,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
